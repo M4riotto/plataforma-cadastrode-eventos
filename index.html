@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Integrador II</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/custom.css">
+
+  <script src="bootstrap/js/jquery.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body onload="loadEventos(), loadSlide()">
+  <a href="index.html"><i class="fa-solid fa-arrow-up" style="position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0e8fff;
+  color: black;
+  padding: 15px;"></i></a>
+  
+  <div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-faded"> <!-- navbar-light: cor padrão claro; bg-faded: colocar cor na nav;  -->
+      <div class="container justify-content-center"> <!-- centralização dos atributos da nav -->
+
+        <!-- Elemento do destaque no navbar -->
+          <div id="logo">
+            <a class="logo" href="index.html">
+              <img class="imgLogo" src="img/logo.svg" alt="logo">
+            </a>
+            <h1>Nosso<span>Site</span></h1>
+          </div> <!--#logo-->
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarsite"> <!-- botão para abrir quando o site for vizualizado em telas menores -->
+          <span class="navbar-toggler-icon"></span> 
+        </button>
+
+        <!--Criação dos itens do navbar-->
+        <div class="navbar-collapse collapse ml-5" id="navbarsite">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link active">Início</a></li>
+            <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#footer" class="nav-link">Contato</a></li>
+          </ul> <!-- .navbar-nav-->
+
+          <!--dropdown-->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggles" data-toggle="dropdown" id="navDrop">Social...</a> <!-- para conseguirmos abrir a janelinha com os link das redes -->
+              <div class="dropdown-menu w-25">
+                <a href="https://pt-br.facebook.com/" class="dropdown-item">Facebook</a>
+                <a href="https://twitter.com/login?lang=pt" class="dropdown-item">Twitter</a>
+                <a href="https://www.instagram.com/" class="dropdown-item">Instagram</a>
+              </div> <!-- .dropdown-menu -->
+            </li> <!-- .nav-item -->
+          </ul> <!-- .navbar-nav -->  <br>
+
+          <!--Formulario de pesquisa-->
+          <form class="form-inline"> 
+            <input type="search" class="form-control ml-lg-5 mr-2" placeholder="Buscar...">
+            <button class="botao btn-light mb-1 mt-1" type="submit">OK</button>
+          </form> <!-- .form-inline -->
+        </div><!-- #navbarsite  -->
+
+        <div class="sigin ml-2">
+          <a href="backend/index.php"><button class="sign-in">Entrar</button></a>
+          <button class="sign-up" onclick="showModalCadastrar('#modal-cadastrar')">Cadastrar-se</button>
+        </div> <!-- .sigin -->
+      </div><!-- .container -->
+    </nav> <!-- .navbar -->
+  
+  <!--categorias-->
+  <div class="categoria">
+    <div class="botoes_categoria">
+      <h3 class="ml-4">Categorias</h3>
+      <!-- <button class="mr-3">Ver tudo</button> -->
+    </div>
+    
+    <div class="container-lg container-fluid-md cat justify-content-between">
+      <a href="#festas"><img class="links" title="Festas" src="img/festas.jpg" alt="Festas" width="110" height="110"></a>
+      <a href="#palestras"><img class="links" title="Palestras" src="img/palestras.jpg" alt="Palestras" width="110" height="110"></a>
+      <a href="#halloween"><img class="links" title="Halloween" src="img/halloween.jpg" alt="Halloween" width="110" height="110"></a>
+      <a href="#standUP"><img class="links" title="StandUp" src="img/startup.jpg" alt="StandUp" width="110" height="110"></a>
+      <a href="#workshops"><img class="links" title="Workshops" src="img/workshop.jpg" alt="Workshops" width="110" height="110"></a>
+    </div><!-- .cat -->
+  </div> <!-- .categoria -->
+
+  <!-- Carousel -->
+  <div class="carousel slide mb-4" id="carouselhome" data-ride="carousel">
+    <!-- div que irá sustentar as imagens e textos do carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/carousel0.jpg" alt="" class="img-fluid d-block">
+        <div class="carousel-caption d-none d-block">
+          <h3>Lorem ipsum.</h3>
+          <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div> <!-- Item 1 do carousel -->
+      <div id="carrossel"></div>
+
+      <!-- Controles '<' '>' dos slides -->
+      <a href="#carouselhome" class="carousel-control-prev" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a href="#carouselhome" class="carousel-control-next" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+      
+    </div> <!-- <div class="carousel-inner"> -->
+  </div> <!-- Carousel -->
+
+  <!--divs das categorias para js--> <!-- Aqui irá aparecer os cards -->
+  <div id="corpo1">
+    <h2 class="festas">Festas</h2>
+    <div id="festas"></div>
+    <h2 class="palestras">Palestras</h2>
+    <div id="palestras"></div>
+    <h2 class="halloween">Halloween</h2>
+    <div id="halloween"></div>
+    <h2 class="standup">StandUP</h2>
+    <div id="standUP"></div>
+    <h2 class="workshops">Workshops</h2>
+    <div id="workshops"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="end bg-dark text-center text-white" id="footer">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-google"></i>
+        </a>
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-linkedin-in fa-color-blue"></i>
+        </a>
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-github fa-color-blue"></i>
+        </a>
+      </section>
+      <!-- Section: Social media -->
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Entre em contato conosco</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input class="form-control" type="email" id="form5Example21" placeholder="email@gmail.com"/>
+                <br>
+                <textarea class="form-control" name="" id="" cols="60" rows="5" placeholder="Digite aqui..."></textarea>
+                <!--Grid column-->
+                <div class="col-auto">
+                  <!-- Submit button -->
+                  <button class="btn btn-outline-light mb-4" type="submit">
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--Grid column-->
+          </div>
+        <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+      <!-- Section: Text -->
+      <section class="mb-4" id="sobre">
+        <h2 style="border: none; border-bottom: 1px solid orange;">Sobre nós</h2>        
+        <p>
+          Site desenvolvido para fins acadêmicos, com o intuito de aplicarmos tudo o que aprendemos nas aulas. O NossoSite tem como principal objetivo o cadastro de eventos em geral.
+        </p>
+      </section>
+      <!-- Section: Text -->
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center text-muted footer-bg-color p-3">
+      © 2022 Copyright | Giovanna Siqueira | Vítor Moreira
+    </div>
+    <!-- Copyright -->
+    
+
+  <!--modal cadastrar-->
+  <div class="modal" id="modal-cadastrar" onclick="hideModalCadastrar('#modal-cadastrar', event)" style="height:1500px; align-items: unset; color:black;">
+    <div class="modal-body">
+
+        <div class="caixaEventos">
+        <form onsubmit="insertCadastro(event)" class="painel">
+          <h2>Cadastro</h2>
+          <label for="nome">Seu Nome:</label>
+          <input type="text" name="nome" required>
+          <label for="cpf">Seu CPF:</label>
+          <input type="cpf" name="cpf">
+          <label for="dataNascimento">Data Nascimento:</label>
+          <input type="date" name="dataNascimento">
+
+          <label for="sexo">sexo:</label>
+            <select id="sexo" name="sexo">
+                <option value="selecione" selected disabled >Selecione</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+
+          <label for="email">E-mail:</label>
+          <input type="email" name="email">
+          <label for="usuario">Usuario:</label>
+          <input type="text" name="usuario">
+          <label for="senha">Senha:</label>
+          <input type="text" name="senha">
+          
+          <input type="submit" onclick="closeAllModalCadastrar()" value="Cadastrar"></input>
+          <input id="fechar" type="button" value="Fechar" onclick="closeAllModalCadastrar()">
+        </form>
+    </div>
+  </div>
+</div>
+<script src="assets/script.js"></script>
+<!-- <script src="assets/script/main.js"></script> -->
+</body>
+</html>

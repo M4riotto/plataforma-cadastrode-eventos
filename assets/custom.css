@@ -1,0 +1,556 @@
+                                                                            /*paleta de cores*/
+:root{
+    --nav: #0368f684;
+    --logo: #f0e16f;
+    --form: rgb(227, 247, 255);
+    --fundo: #e4e0e0d5;
+    --categoria: #ffcb9a;
+    --color1: #ffbb9a;
+    --color3: #1859e6;
+    --color5: #868686;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bree Serif', serif; 
+    text-decoration: none;
+}
+/* index.html */
+/* NAV */
+.wrapper > .bg-faded{
+    background-color: var(--nav);
+}
+.wrapper > .navbar > .container > #logo {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+#logo > .logo > .imgLogo{
+    width: 50px;
+    margin-right: 5px;
+}
+#logo > h1{
+    color: black;
+}
+#logo > h1 > span{
+    color: var(--logo);
+}
+#navbarsite > .navbar-nav > .nav-item > .nav-link{
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: rgb(58, 58, 58);
+}
+#navbarsite > .navbar-nav > .nav-item > .active {
+    color: rgb(44, 39, 39);
+    padding-bottom: 0;
+    border-bottom: 2px solid var(--logo);
+}
+/* DROPDOWN */
+.navbar-nav > .nav-item > .dropdown-menu {
+    border-radius: 10px;
+}
+/* FORMULARIO DE PESQUISA */
+.sign-in, .sign-up, .botao, .form-control {
+    border-radius: 12px;
+    padding: 3px 9px;
+}
+.sign-in{
+    background-color: blue;
+    border: 2px solid blue;
+}
+.sign-up{
+    background-color: rgb(28, 190, 28);
+    border: 2px solid rgb(28, 190, 28);
+}
+.botao, .form-control{
+    background-color: rgb(219, 216, 216);
+    border:  2px solid rgb(241, 238, 238);
+}
+.botao:hover{
+    background-color: rgb(202, 199, 199);
+    border:  2px solid rgb(175, 175, 175);
+}
+.sign-in:hover{
+    background-color: rgb(62, 66, 255);
+    border:  2px solid rgb(62, 66, 255);
+}
+.sign-up:hover{
+    background-color: rgb(56, 201, 68);
+    border:  2px solid rgb(56, 201, 68);
+}
+/* CATEGORIA */
+.botoes_categoria{
+    display: flex;
+    margin-top: 10px;
+}
+.categoria > .botoes_categoria > h3 {
+    font-weight: bold;
+    margin-top: 7px;
+    margin-left: 10px;
+    border-left: 5px solid rgb(88, 88, 88);
+    padding: 5px;
+}
+.categoria > .cat{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 8px 0 15px 0;
+}
+.cat::-webkit-scrollbar {
+    height: 10px; /* width of the entire scrollbar */
+}
+.cat::-webkit-scrollbar-track {
+    background: var(--grey-400); /* color of the tracking area */
+}
+.cat::-webkit-scrollbar-thumb {
+    background-color: var(--grey-600); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+}
+.categoria > .cat > a > .links{
+    border-radius: 200px;
+    margin-left: 10px;
+}
+/* DIVS DAS CATEGORIAS  */
+#corpo1 > .festas{
+    margin-left: 30px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    border-left: 5px solid rgb(171, 236, 145);
+    padding: 5px;
+}
+#corpo1 > .palestras{
+    margin-left: 30px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    border-left: 5px solid rgb(159, 177, 216);
+    padding: 5px;
+}
+#corpo1 > .halloween{
+    margin-left: 30px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    border-left: 5px solid rgb(255, 181, 97);
+    padding: 5px;
+}
+#corpo1 > .standup{
+    margin-left: 30px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    border-left: 5px solid rgb(225, 165, 253);
+    padding: 5px;
+}
+#corpo1 > .workshops{
+    margin-left: 30px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+    border-left: 5px solid rgb(211, 106, 141);
+    padding: 5px;
+}
+#festas, #palestras, #halloween, #standUP, #workshops{
+    margin: 10px;
+    display: flex;
+    overflow-x: auto;
+    padding: 0;
+}
+/* FOOTER  */
+footer.end{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.btn-outline-light{
+    margin-top: 5px;
+}
+/* /index.html */
+
+/* painel.php */
+body{
+    background-color: var(--fundo);
+}
+header{
+    background-color: var(--nav);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header > div.logo {
+    display: flex;
+    align-items: center;
+}
+header > div.logo > .imgLogo{
+    width: 50px;
+    margin-right: 5px;
+}
+header > div.logo > h2 > span{
+    font-size: 35px;
+    color: var(--logo);
+}
+header > a:hover{
+    color: var(--fundo);
+}
+.BotoesNav{
+    display: flex;
+    padding: 10px;
+}
+.caixaEventos, .caixaParticipantes{
+    margin: 15px 0 15px 0;
+    display: flex;
+    justify-content: center;
+}
+.caixaImagens{
+    margin: 15px 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+form.painel{
+    width: 500px;
+    background-color: var(--form);
+    border: 2px solid var(--color3);
+    border-radius: 50px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.caixaEventos > form > h2, .caixaParticipantes > form > h2{
+    text-align: center;
+    color: var(--color3);
+}
+.p1, #numero, #cx {
+    font-weight: bold;
+    text-align:center;
+    color: rgb(221, 51, 51);
+}
+.caixaEventos > form > label{
+    font-size: 18px;
+}
+.caixaParticipantes > form > label{
+    font-size: 18px;
+}
+.caixaImagens > label{
+    font-size: 20px;
+}
+.caixaImagens > input{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgb(194, 26, 26);
+    border:  2px solid rgb(199, 31, 31);
+    font-size: 18px;
+    width: 100px;
+}
+.caixaImagens > input:hover{
+    text-decoration: none;
+    color: rgb(197, 196, 196);
+}
+.caixaImagens > a > input{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgb(173, 221, 161);
+    border:  2px solid rgb(174, 255, 174);
+    font-size: 16px;
+}
+.caixaImagens > a > input:hover{
+    text-decoration: none;
+    color: rgb(197, 196, 196);
+}
+.cx1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+input, textarea, select{
+    background-color: rgb(248, 253, 255);
+    margin: 3px 0 3px 0;
+    border-radius: 15px;
+    padding: 5px;
+    border: 2px solid var(--color3);
+}
+input[type=date]{
+    border-radius: 18px;
+}
+input[type=number]{
+    width: 230px;
+}
+input[name=municipio]{
+    width: 230px;
+}
+select[name=uf], select[name=categoria]{
+    width: 230px;
+}
+input[type=submit]{
+    width: auto;
+    margin: auto;
+    color: rgb(250, 250, 250);
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #308f19;
+    border:  2px solid #288b28;
+}
+input[type=submit]:hover{
+    text-decoration: none;
+    color: rgb(197, 196, 196);
+}
+.verde{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgb(48, 143, 25);
+    border:  2px solid rgb(40, 139, 40);
+    margin-right: 10px;
+}
+.vermelho{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgb(194, 26, 26);
+    border:  2px solid rgb(199, 31, 31);
+}
+.vermelho:hover, .verde:hover {
+    text-decoration: none;
+    color: rgb(197, 196, 196);
+}
+/* /painel.php */
+
+/*card*/
+.card-header, .card-footer{
+    background: none;
+}
+
+.card-rodape-empresa{
+    font-size: 0.7rem;
+}
+.verMais{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgb(48, 143, 25);
+    border:  2px solid rgb(40, 139, 40);
+    margin-right: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.vaga {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgb(194, 26, 26);
+    border:  2px solid rgb(199, 31, 31);
+}
+.vaga:hover, .verMais:hover{
+    text-decoration: none;
+    color: rgb(197, 196, 196);
+}
+/*modal*/
+.modal-content{
+    background-color: #bccbdd;
+    border-radius: 30px;
+}
+.modal{
+    background-color: #0c0c0c85;
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+.modal .modal-body{
+    top: 20px;
+    max-width: 600px;
+    border-radius: 15px;
+    background-color: #e4e0f900;;
+    color: var(--grey-0);
+    padding: 30px 20px;
+}
+.modal .bodyImg{
+    top: 20px;
+    max-width: 600px;
+    border-radius: 15px;
+    background-color: #e4e0f9;;
+    color: var(--grey-0);
+    padding: 30px 20px;
+}
+.modal .cadastroP{
+    top: 20px;
+    max-width: 600px;
+    height: 880px;
+    border-radius: 15px;
+    background-color: #e4e0f9;
+    color: black;
+    padding: 30px 20px;
+}
+.modal .modal-body form{
+    display: flex;
+    flex-direction: column;
+}
+.modal .cadastroP form{
+    align-items: center;
+}
+.modal .modal-body form label{
+    margin: 15px 0 0 0;
+}
+.modal .modal-body form input[type=text],[type=email],[type=cpf],[type=date]{
+    height: 30px;
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+.modal .cadastroP form input, select{
+    width: 70%;
+}
+.modal .modal-body form button{
+    margin: 15px 0 0 0;
+}
+.wrapper1{
+    color: black;
+}
+#festas > div > .card{
+    color: black;
+    background-color: rgb(171, 236, 145);
+    width: 18rem;
+    height: 590px;
+    border-radius: 30px;
+}
+#halloween > div > .card{
+    color: black;
+    background-color: rgb(255, 181, 97);
+    width: 18rem;
+    height: 590px;
+    border-radius: 30px;
+}
+#palestras > div > .card{
+    color: black;
+    background-color: rgb(159, 177, 216);
+    width: 18rem;
+    height: 590px;
+    border-radius: 30px;
+}
+#standUP > div > .card{
+    color: black;
+    background-color: rgb(225, 165, 253);
+    width: 18rem;
+    height: 590px;
+    border-radius: 30px;
+}
+#workshops > div > .card{
+    color: black;
+    background-color: rgb(211, 106, 141);
+    width: 18rem;
+    height: 590px;
+    border-radius: 30px;
+}
+.card-img-top{
+    height: 200px;
+}
+.card-body1{
+    height: 150px;
+    overflow-y: auto;
+}
+.card-body1 > h5{
+    text-align: center;
+}
+.card-body2{
+    height: 90px;
+    overflow-y: auto;
+}
+.list-group{
+    padding: 10px;
+    height: 270px;
+}  
+#festas > div > .card > .card-body > .list-group > .list-group-item{
+    background-color:rgb(208, 253, 190);
+}
+#palestras > div > .card > .card-body > .list-group > .list-group-item{
+    background-color:rgb(209 198 255);
+}
+#halloween > div > .card > .card-body > .list-group > .list-group-item{
+    background-color:rgb(255, 218, 175);
+}
+#standUP > div > .card > .card-body > .list-group > .list-group-item{
+    background-color:rgb(228, 191, 245);
+}
+#workshops > div > .card > .card-body > .list-group > .list-group-item{
+    background-color:rgb(255, 187, 210);
+}
+/*personalizar a barra em geral*/
+.list-group::-webkit-scrollbar {
+    width: 1px;
+}
+.card-body1::-webkit-scrollbar {
+    width: 1px;
+}
+.card-body2::-webkit-scrollbar {
+    width: 1px;
+}
+.apagar{
+    font-size: 10px;
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgb(194, 26, 26);
+    border:  2px solid rgb(199, 31, 31);
+}
+.editar{
+    font-size: 10px;
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgb(48, 143, 25);
+    border:  2px solid rgb(40, 139, 40);
+    margin-right: 10px;
+}
+.apagar:hover, .editar:hover{
+    text-decoration: none;
+    color: rgb(197, 196, 196);
+}
+@media (max-width: 600px){
+    .card{
+        width: 18rem;
+    }
+    .cat > a > .links {
+        width: 85px;
+        height: 60px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .BotoesNav{
+        font-size: 12px;
+    }
+    .cx1{
+        flex-direction: column;
+    }
+    form.painel{
+        width: 334px;
+    }
+}
+@media (max-width: 470px){
+    .BotoesNav{
+        margin: 0;
+        padding: 0px;
+        font-size: 9px;
+    }
+}
+
+
+
