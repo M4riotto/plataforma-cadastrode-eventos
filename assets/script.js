@@ -532,3 +532,47 @@ function loadPage() {
     loadSlidePainel();
 }
    
+//VALIDAÇÕES=====
+function formatCPF() {
+
+    let cpf = document.querySelector("#cpf").value;
+    // Remove all non-digit characters
+    cpf = cpf.replace(/\D/g, '');
+  
+    // Verify if the CPF has a valid length
+    if (cpf.length !== 11) {
+      return 'CPF inválido';
+    }else{
+        var cpfOK = document.querySelector('#cpf')
+        cpfOK.value = cpf.slice(0, 3) + '.' + cpf.slice(3, 6) + '.' + cpf.slice(6, 9) + '-' + cpf.slice(9);
+    }
+  }
+
+  function validateEmail() {
+    let email = document.querySelector("#email").value;
+
+    let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+    if (emailRegex.test(email)) {
+        let input = document.querySelector("#email");
+        input.style.backgroundColor="#0f0";
+    } else {
+        let input = document.querySelector("#email");
+        input.style.backgroundColor="#f00";
+    }
+}
+
+function mostrarSenha(){
+    var senha = document.querySelector("#senha");
+    var toggleIcon = document.querySelector("#icon");
+
+  if (senha.type === "password") {
+    senha.type = "text";
+    toggleIcon.className = "fa fa-eye-slash";
+  } else {
+    senha.type = "password";
+    toggleIcon.className = "fa fa-eye";
+  }
+}
+
+  

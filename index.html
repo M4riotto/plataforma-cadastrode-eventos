@@ -223,8 +223,8 @@
           <h2>Cadastro</h2>
           <label for="nome">Seu Nome:</label>
           <input type="text" name="nome" required>
-          <label for="cpf">Seu CPF:</label>
-          <input type="cpf" name="cpf">
+          <label for="cpf" >Seu CPF:</label>
+          <input type="cpf" name="cpf" id="cpf" onmouseout="formatCPF()">
           <label for="dataNascimento">Data Nascimento:</label>
           <input type="date" name="dataNascimento">
 
@@ -236,11 +236,16 @@
             </select>
 
           <label for="email">E-mail:</label>
-          <input type="email" name="email">
+          <input type="email" name="email" id="email" onmouseout="validateEmail()">
           <label for="usuario">Usuario:</label>
           <input type="text" name="usuario">
           <label for="senha">Senha:</label>
-          <input type="text" name="senha">
+          <div class="d-flex justify-content-center">
+            <input type="password" name="senha" id="senha">
+            <span class="d-flex align-items-center pl-2" >
+              <i id="icon" class="fa fa-eye" onclick="mostrarSenha()"></i>
+            </span>
+          </div>
           
           <input type="submit" onclick="closeAllModalCadastrar()" value="Cadastrar"></input>
           <input id="fechar" type="button" value="Fechar" onclick="closeAllModalCadastrar()">
