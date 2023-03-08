@@ -536,15 +536,17 @@ function loadPage() {
 function formatCPF() {
 
     let cpf = document.querySelector("#cpf").value;
+    var cpfOK = document.querySelector('#cpf')
     // Remove all non-digit characters
     cpf = cpf.replace(/\D/g, '');
   
     // Verify if the CPF has a valid length
-    if (cpf.length !== 10) {
-      return 'CPF inválido';
-    }else{
-        var cpfOK = document.querySelector('#cpf')
+    if (cpf.length > 9) {
+        
         cpfOK.value = cpf.slice(0, 3) + '.' + cpf.slice(3, 6) + '.' + cpf.slice(6, 9) + '-' + cpf.slice(9);
+        cpfOK.style.border="2px solid green"
+    }else{
+        cpfOK.style.border="2px solid red"
     }
   }
 
