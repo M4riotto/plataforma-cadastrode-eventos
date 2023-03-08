@@ -4,9 +4,13 @@
 
     $erro = array();
     
+    
     $email = filter_input_array(INPUT_POST, FILTER_DEFAULT);
     if (!empty($email['ok'])) { //empty = vazio || só acessa esse if qnd o usuario clicar no botao
         $email = $_POST['email'];
+
+        $_SESSION['email'] = $email;
+
         
         $query_senha = "SELECT id, senha_usuario 
                           FROM usuarios 
@@ -26,7 +30,16 @@
                 if ($row_usuario != 0) {
                     $novasenha = substr(md5(time()), 0, 6);                   
                     $senhacripto = password_hash($novasenha, PASSWORD_DEFAULT);
-                    echo('Sua nova senha é: ' . $novasenha);
+
+                    $from = "vitormariotto03@gmail.com";
+                    $to = $_POST['email'];
+                    $subject = "token de confirmação";
+                    $message = $novasenha;
+                    $headers = "From: " . $from;
+                    mail($to, $subject, $message, $headers);
+                    
+                    header('Location: verificasenha.php');
+
 //mail($email, "Sua nova senha", "Sua nova senha é: ".$senhacripto)
                     if (1==1) {
                         $update = "UPDATE usuarios set senha_usuario = '$senhacripto' WHERE email = '$email'";
@@ -54,7 +67,7 @@
     <title>Recuperação de senha</title>
     <style>
         body, html{
-            background-color: #3ecbff;
+            background-color: #3ecbf9;
             height: 100%;
         }
         body{
@@ -105,7 +118,7 @@
     <form action="" method="post">
         <h2>Recuperação de senha</h2>
         <label for="email"></label>
-        <input type="email" name="email" placeholder="Digite seu e-mail"><br>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail"><br>
         <button type="submit" name="ok" value="ok">Enviar</button>
         
     </form><br>
