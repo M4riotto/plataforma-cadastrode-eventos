@@ -10,6 +10,8 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
     <title>lOGIN</title>
 </head>
 
@@ -133,7 +135,10 @@
                     <label>Usuário:</label>
                     <input type="text" name="usuario" placeholder="Digite o usuário" value="<?php if(isset($dados['usuario'])){echo $dados['usuario']; } ?>"><br><br> <!--mantendo o que o cara digitou caso ele erre algo-->
                     <label>Senha:</label>
-                    <input type="password" name="senha_usuario" placeholder="Digite a senha" value="<?php if(isset($dado['senha_usuario'])){ echo $dados['senha_usuario']; } ?>"> <br><br>
+                    <input type="password" id="senha" name="senha_usuario" placeholder="Digite a senha" value="<?php if(isset($dado['senha_usuario'])){ echo $dados['senha_usuario']; } ?>">
+                    <span class="" >
+                        <i id="icon" class="fa fa-eye" onclick="mostrarSenha()"></i>
+                    </span> <br><br>
                         
                     <div>
                         <input type="submit" value="Acessar" name="SendLogin"><!--sendLogin nome do botão--><br/>
@@ -148,6 +153,18 @@
 <script>
     function voltarpagina(){
         window.location.replace('../index.html')
+    }
+    function mostrarSenha(){
+            let senha = document.querySelector("#senha");
+            let toggleIcon = document.querySelector("#icon");
+
+        if (senha.type === "password") {
+            senha.type = "text";
+            toggleIcon.className = "fa fa-eye-slash";
+        } else {
+            senha.type = "password";
+            toggleIcon.className = "fa fa-eye";
+        }
     }
 </script>
 </html>
