@@ -37,7 +37,6 @@
                     $message = $novasenha;
                     $headers = "From: " . $from;
                     mail($to, $subject, $message, $headers);
-                    
                     header('Location: verificasenha.php');
 
 //mail($email, "Sua nova senha", "Sua nova senha é: ".$senhacripto)
