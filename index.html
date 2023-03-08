@@ -224,7 +224,7 @@
           <label for="nome">Seu Nome:</label>
           <input type="text" name="nome" required>
           <label for="cpf" >Seu CPF:</label>
-          <input type="cpf" name="cpf" id="cpf" onmouseout="formatCPF()">
+          <input type="cpf" name="cpf" id="cpf" onkeyup="formatCPF()">
           <label for="dataNascimento">Data Nascimento:</label>
           <input type="date" name="dataNascimento">
 
@@ -236,7 +236,7 @@
             </select>
 
           <label for="email">E-mail:</label>
-          <input type="email" name="email" id="email" onmouseout="validateEmail()">
+          <input type="email" name="email" id="email" onkeyup="validateEmail()">
           <label for="usuario">Usuario:</label>
           <input type="text" name="usuario">
           <label for="senha">Senha:</label>

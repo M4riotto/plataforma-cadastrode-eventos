@@ -540,7 +540,7 @@ function formatCPF() {
     cpf = cpf.replace(/\D/g, '');
   
     // Verify if the CPF has a valid length
-    if (cpf.length !== 11) {
+    if (cpf.length !== 10) {
       return 'CPF inválido';
     }else{
         var cpfOK = document.querySelector('#cpf')
