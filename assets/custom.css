@@ -1,13 +1,14 @@
                                                                             /*paleta de cores*/
 :root{
-    --nav: #0368f684;
-    --logo: #f0e16f;
-    --form: rgb(227, 247, 255);
-    --fundo: #e4e0e0d5;
-    --categoria: #ffcb9a;
-    --color1: #ffbb9a;
-    --color3: #1859e6;
-    --color5: #868686;
+    --nav: #353535;
+    --logo: #b52c33;
+    --logo2: #dd494c;
+    --form: #cccccc;
+    --fundo: #bebebe8e;
+    --categoria: #cccccc;
+    --color1: #353535;
+    --color3: #5b5b5b;
+    --color5: #8e8e8e;
 }
 *{
     margin: 0;
@@ -26,8 +27,9 @@
     margin-right: 10px;
 }
 #logo > .logo > .imgLogo{
-    width: 50px;
+    width: 150px;
     margin-right: 5px;
+    margin-bottom: 22px;
 }
 #logo > h1{
     color: black;
@@ -38,10 +40,10 @@
 #navbarsite > .navbar-nav > .nav-item > .nav-link{
     font-size: 18px;
     /* font-weight: bold; */
-    color: rgb(58, 58, 58);
+    color: var(--categoria);
 }
 #navbarsite > .navbar-nav > .nav-item > .active {
-    color: rgb(44, 39, 39);
+    color: var(--categoria);
     padding-bottom: 0;
     border-bottom: 2px solid var(--logo);
 }
@@ -55,12 +57,12 @@
     padding: 3px 9px;
 }
 .sign-in{
-    background-color: blue;
-    border: 2px solid blue;
+    background-color: var(--logo);
+    border: 2px solid var(--logo);
 }
 .sign-up{
-    background-color: rgb(28, 190, 28);
-    border: 2px solid rgb(28, 190, 28);
+    background-color: var(--logo2);
+    border: 2px solid var(--logo2);
 }
 .botao, .form-control{
     background-color: rgb(219, 216, 216);
@@ -71,12 +73,12 @@
     border:  2px solid rgb(175, 175, 175);
 }
 .sign-in:hover{
-    background-color: rgb(62, 66, 255);
-    border:  2px solid rgb(62, 66, 255);
+    background-color: var(--categoria);
+    border:  2px solid var(--categoria);
 }
 .sign-up:hover{
-    background-color: rgb(56, 201, 68);
-    border:  2px solid rgb(56, 201, 68);
+    background-color: var(--categoria);
+    border:  2px solid var(--categoria);
 }
 /* CATEGORIA */
 .botoes_categoria{
@@ -324,6 +326,8 @@ input[type=submit]:hover{
 /*card*/
 .card-header, .card-footer{
     background: none;
+    color: var(--logo);
+    font-size: 24px;
 }
 
 .card-rodape-empresa{
@@ -421,35 +425,35 @@ input[type=submit]:hover{
 }
 #festas > div > .card{
     color: black;
-    background-color: rgb(171, 236, 145);
+    background-color: var(--color5);
     width: 18rem;
     height: 590px;
     border-radius: 30px;
 }
 #halloween > div > .card{
     color: black;
-    background-color: rgb(255, 181, 97);
+    background-color: var(--color5);
     width: 18rem;
     height: 590px;
     border-radius: 30px;
 }
 #palestras > div > .card{
     color: black;
-    background-color: rgb(159, 177, 216);
+    background-color: var(--color5);
     width: 18rem;
     height: 590px;
     border-radius: 30px;
 }
 #standUP > div > .card{
     color: black;
-    background-color: rgb(225, 165, 253);
+    background-color: var(--color5);
     width: 18rem;
     height: 590px;
     border-radius: 30px;
 }
 #workshops > div > .card{
     color: black;
-    background-color: rgb(211, 106, 141);
+    background-color: var(--color5);
     width: 18rem;
     height: 590px;
     border-radius: 30px;
@@ -473,19 +477,19 @@ input[type=submit]:hover{
     height: 270px;
 }  
 #festas > div > .card > .card-body > .list-group > .list-group-item{
-    background-color:rgb(208, 253, 190);
+    background-color:var(--form);
 }
 #palestras > div > .card > .card-body > .list-group > .list-group-item{
-    background-color:rgb(209 198 255);
+    background-color:var(--form);
 }
 #halloween > div > .card > .card-body > .list-group > .list-group-item{
-    background-color:rgb(255, 218, 175);
+    background-color:var(--form);
 }
 #standUP > div > .card > .card-body > .list-group > .list-group-item{
-    background-color:rgb(228, 191, 245);
+    background-color:var(--form);
 }
 #workshops > div > .card > .card-body > .list-group > .list-group-item{
-    background-color:rgb(255, 187, 210);
+    background-color:var(--form);
 }
 /*personalizar a barra em geral*/
 .list-group::-webkit-scrollbar {

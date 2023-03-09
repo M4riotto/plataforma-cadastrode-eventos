@@ -37,8 +37,19 @@
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <title>Recuperação de senha</title>
     <style>
+        :root{
+            --nav: #353535;
+            --logo: #b52c33;
+            --logo2: #dd494c;
+            --form: #cccccc;
+            --fundo: #bebebe8e;
+            --categoria: #cccccc;
+            --color1: #353535;
+            --color3: #5b5b5b;
+            --color5: #8e8e8e;
+        }
         body, html{
-            background-color: #3ecbff;
+            background-color: var(--color1);
             height: 100%;
         }
         body{
@@ -49,7 +60,7 @@
         }
         form > .flex > input{
             border-radius: 7px;
-            border: 2px solid #ffbb9a;
+            border: 2px solid var(--logo);
             padding: 10px;
             margin-right:10px;
         }
@@ -61,19 +72,25 @@
 
         form > button{
             padding: 5px;
-            border: 2px solid #ffbb9a;
+            border: 2px solid var(--logo);
+            background-color: var(--logo);
+            border-radius: 10px;
         }
 
         form > button:hover{
-            background-color: #007affcc;
+            border: 2px solid var(--logo2);
+            background-color: var(--logo2);
         }
         a > button{
             padding: 5px;
-            border: 2px solid #ffbb9a;
+            border: 2px solid var(--logo);
+            background-color: var(--logo);
+            border-radius: 10px;
             width: 100%;
         }
         a > button:hover{
-            background-color: #007affcc;
+            border: 2px solid var(--logo2);
+            background-color: var(--logo2);
         }
 
         .caixa{

@@ -128,7 +128,7 @@ async function loadEventos() {
                     <img src="${eventos.capa}" class="card-img-top">
                     <div class="card-body card-body1">
                         <h5 class="card-title">${eventos.nome}</h5>
-                        <h6 class="card-sub-title mb-2 text-muted">${eventos.descricao}</h6>
+                        <h6 class="card-sub-title mb-2 text-light">${eventos.descricao}</h6>
                         <h5 class="card-title">Mais Informações</h5>
                      <ul class="list-group">
                             <li class="list-group-item">Dia: ${eventos.dia}</li>

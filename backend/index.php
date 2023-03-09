@@ -17,12 +17,16 @@
 
 <style>
     :root{
-    --color1: #ffbb9a;
-    --color2: #ffed6e;
-    --color3: #091fb4;
-    --color4: #0368f6;
-    --color5: #3ecbff;
-    }
+    --nav: #353535;
+    --logo: #b52c33;
+    --logo2: #dd494c;
+    --form: #cccccc;
+    --fundo: #bebebe8e;
+    --categoria: #cccccc;
+    --color1: #353535;
+    --color3: #5b5b5b;
+    --color5: #8e8e8e;
+}
     html,body{
         height: 100%;
     }
@@ -30,7 +34,7 @@
         max-width: 400px;
         padding: 0;
         margin: 0 auto !important;
-        background: var(--color5);
+        background: var(--color1);
     }
     #wrapper{
         height: 100%;
@@ -40,9 +44,8 @@
     }
     .container{
         background-color: #e5e5e5fa;
-        padding: 20px;
         border-radius: 10px;
-        box-shadow: 10px 5px 5px black;
+        box-shadow: 10px 5px 5px var(--logo2);
     }
     .erro{
         display:flex;  
@@ -72,13 +75,13 @@
         font-size: 25px;
         display: flex;
         width: 100%;
-        background-color: #009affcc;
+        background-color: var(--logo);
         justify-content: center;
         height: 35px;
         
     }
     form > div > input[type=submit]:hover,input[type=button]:hover{
-        background-color: #007affcc;
+        background-color: var(--form);
     }
     form > div{
         display: flex;
